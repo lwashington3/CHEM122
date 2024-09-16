@@ -18,3 +18,12 @@
 \DeclareStringOption[\today]{date}
 
 \ProcessKeyvalOptions*
+
+\RequirePackage{chem122}
+\RequirePackage{enumitem}
+
+\let\oldemph\emph
+\renewcommand{\emph}[1]{\textcolor{red}{#1}}
+\newcommand{\definition}[2]{\emph{#1} -- #2}
+
+\setlength{\parindent}{0pt}

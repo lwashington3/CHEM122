@@ -14,7 +14,7 @@
 
 \DeclareStringOption{title}
 \DeclareStringOption[Len Washington III]{author}
-\DeclareStringOption[\today]{date}
+\DeclareStringOption[{\today}]{date}
 \DeclareStringOption[]{subject}
 \DeclareStringOption[]{subjectCode}
 
@@ -22,7 +22,16 @@
 
 \RequirePackage[author=\chem@author,
 	title=\chem@title,
-	date=\chem@date,
+	date={\chem@date},
 	subject=\chem@subject,
 	code=\chem@subjectCode
 ]{iitacademics}
+
+\RequirePackage{xparse}
+\NewDocumentCommand{\element}{m o}{%
+	\mbox{#1}%
+	\IfValueT{#2}{%
+		\ifx1\#2\else_{#2}\fi% Don't write the coefficient if it's 1
+	}%
+}
+\let\chemical\element
