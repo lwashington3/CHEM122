@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="September 16, 2024 Notes" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+  <configuration default="false" name="Chapter 4 Notes" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
     <texify>
       <compiler>PDFLATEX</compiler>
       <compiler-path />
@@ -9,9 +9,9 @@
       <compiler-arguments />
       <envs />
       <before-run-command />
-      <main-file>$PROJECT_DIR$/src/notes/09-16-2024.tex</main-file>
+      <main-file>$PROJECT_DIR$/src/notes/chapter4.tex</main-file>
       <output-path>$PROJECT_DIR$/out/notes</output-path>
-      <auxil-path>$PROJECT_DIR$/src/notes</auxil-path>
+      <auxil-path>$PROJECT_DIR$/auxil/notes</auxil-path>
       <compile-twice>false</compile-twice>
       <output-format>PDF</output-format>
       <latex-distribution>MIKTEX</latex-distribution>

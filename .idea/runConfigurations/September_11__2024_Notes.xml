@@ -11,7 +11,7 @@
       <before-run-command />
       <main-file>$PROJECT_DIR$/src/notes/09-11-2024.tex</main-file>
       <output-path>$PROJECT_DIR$/out/notes</output-path>
-      <auxil-path>$PROJECT_DIR$/src/notes</auxil-path>
+      <auxil-path>$PROJECT_DIR$/auxil/notes</auxil-path>
       <compile-twice>false</compile-twice>
       <output-format>PDF</output-format>
       <latex-distribution>MIKTEX</latex-distribution>
