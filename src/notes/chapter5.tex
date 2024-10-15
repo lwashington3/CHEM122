@@ -1,0 +1,116 @@
+%! Author = Len Washington III
+%! Date = 10/2/24
+
+% Preamble
+\documentclass[
+	chapter=5,
+	title={Gases},
+	showanswers=true,
+]{chem122notes}
+
+% Packages
+
+% Document
+\begin{document}
+
+\section{Characteristics of Gases}\label{sec:characteristics-of-gases}
+\begin{itemize}
+	\item Gas molecules are very far apart, so total volume of gases is mostly empty space.
+	\item Gas molecules move at high velocities and high kinetic energies.
+	\item Gas volume is dependent on pressure, temperature and moles of the gas.
+\end{itemize}
+
+\section{Real Gases and Ideal Gases}\label{sec:real-gases-and-ideal-gases}
+\begin{itemize}
+	\item Real gases obey the laws of ``ideal'' gases at non-extreme conditions.
+	\item Therefore, gas behavior (pressure, temperature, volume, and number of particles) is determined using gas laws.
+\end{itemize}
+
+\section{Pressure}\label{sec:pressure}
+\begin{itemize}
+	\item Pressure is the force per unit area.
+	\begin{equation}
+		P = \frac{Force}{Area} \ \ or\ \ P = \frac{F}{A}\\
+		\label{eq:pressure}
+	\end{equation}
+	\item So, the pressure will increase with a greater force exerted on an area or with a certain force exerted on a smaller area.
+\end{itemize}
+
+\section{Measuring Pressure}\label{sec:measuring-pressure}
+\begin{minipage}[m]{0.7\textwidth}
+	\begin{itemize}
+		\item A barometer is one way to measure pressure.
+		\item The height of the mercury column in the tube correlates to the atmospheric pressure.
+	\end{itemize}
+\end{minipage}\hfill%
+\begin{minipage}[m]{0.3\textwidth}
+	% TODO: Insert the image
+\end{minipage}
+
+\section{Pressure Units}\label{sec:pressure-units}
+\begin{itemize}
+	\item There are several different units used to describe pressure. We will focus on four of them:
+	\begin{description}[font=\bfseries]
+		\item[atm] atmospheres
+		\item[mmHg] millimeters of Mercury
+		\item[torr]
+		\item[psi] pounds per square inch
+	\end{description}
+	\item 1 atm = 760 mmHg, 1 atm = 760 torr, and 1 atm = 14.7 psi
+	\item So 1 mmHg = 1 torr.
+	\begin{itemize}
+		\item Note: atm, mmHg, and torr are all exact values; psi has been rounded to three sig figs.
+	\end{itemize}
+\end{itemize}
+
+\section{Examples}\label{sec:examples}
+\begin{enumerate}[label=\arabic*.]
+	\item A tire pressure gauge reads 33 psi. What is this pressure reading in torr?%
+	\begin{answer}
+		\begin{equation*}
+		\begin{aligned}
+			33 \mbox{ psi} \times \frac{1 \mbox{ atm}}{14.7 \mbox{ psi}} \times \frac{\mbox{760 torr}}{ \mbox{1 atm}} = 1,\underline{7}06.12245 \mbox{ torr}
+		\end{aligned}
+		\end{equation*}
+	\end{answer}
+	\item In a near-vacuum, the pressure is 0.100 mmHg. What is this pressure in atmospheres?%
+	\begin{answer}
+		\begin{equation*}
+		\begin{aligned}
+			0.100 \mbox{ mmHg} \times \frac{1 \mbox{ atm}}{760 \mbox{ mmHg}} = 1.31579 \times 10^{-4} \mbox{ atm}
+		\end{aligned}
+		\end{equation*}
+	\end{answer}
+\end{enumerate}
+
+\section{Temperature}\label{sec:temperature}
+\begin{itemize}
+	\item One factor involved in gas behavior is temperature (a measure of hot and cold).
+	\item In the lab, temperature is measured in \textdegree{}C + 273.15
+	\item \textbf{Lecture Problem:} A gas is collected in the laboratory at 34\textdegree{}C\@. What is the temperature on the Kelvin scale?
+	\begin{answer}
+		34\textdegree{}C + 273.15 = 307.15\textdegree K
+	\end{answer}
+\end{itemize}
+
+\section{The Gas Laws}\label{sec:the-gas-laws}
+\begin{itemize}
+	\item The Gas Laws focus on the relationship between pressure, temperature, volume, and the amount of a gas.
+	\item We will discuss four gas laws in these sections: \hyperref[sec:boyles-law]{Boyle's Law}, Charles' Law, Amonton's Law, and the Combined Gas Law.
+	\item Note: Any references to standard temperature and pressure (STP\label{dfn:stp}) means 273 \textdegree{}K and 1 atm.
+\end{itemize}
+
+\section{Boyle's Law}\label{sec:boyles-law}
+\begin{itemize}
+	\item If the temperature and amount of a gas are held constant, then the volume of a gas will be inversely proportional to its pressure.
+\end{itemize}
+\begin{equation}
+	\mbox{\textbf{P}}\uparrow\mbox{\textbf{V}}\downarrow \mbox{  and  } \mbox{\textbf{P}}\downarrow\mbox{\textbf{V}}\uparrow
+	\label{eq:boyles-law}
+\end{equation}
+
+\subsection{Boyle's Law Mathematically}\label{subsec:boyle's-law-mathematically}
+Since volume and pressure are inversely proportional to each other, then the mathematical relationship would be:
+\[ V = \frac{k}{P} \mbox{  or  } PV = k \mbox{   where } k \mbox{ is a constant.} \]
+
+\end{document}

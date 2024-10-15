@@ -15,15 +15,24 @@
 }
 
 \DeclareStringOption{title}
+\DeclareStringOption{chapter}
+\DeclareBoolOption[true]{showanswers}
 \DeclareStringOption[\today]{date}
 
 \ProcessKeyvalOptions*
 
-\RequirePackage{chem122}
+\RequirePackage[title={Chapter \chemnotes@chapter\ - \chemnotes@title}]{chem122}
 \RequirePackage{enumitem}
+\RequirePackage{textcomp}
 
+\setcounter{chapter}{\chemnotes@chapter}
 \let\oldemph\emph
 \renewcommand{\emph}[1]{\textcolor{red}{#1}}
 \newcommand{\definition}[2]{\emph{#1} -- #2}
 
 \setlength{\parindent}{0pt}
+
+\RequirePackage{environ}
+\ifchemnotes@showanswers\else
+\RenewEnviron{answer}{}
+\fi
