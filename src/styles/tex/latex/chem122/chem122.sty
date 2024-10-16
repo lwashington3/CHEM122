@@ -15,8 +15,8 @@
 \DeclareStringOption{title}
 \DeclareStringOption[Len Washington III]{author}
 \DeclareStringOption[{\today}]{date}
-\DeclareStringOption[]{subject}
-\DeclareStringOption[]{subjectCode}
+\DeclareStringOption[Principles of Chem 1]{subject}
+\DeclareStringOption[CHEM 122]{subjectCode}
 
 \ProcessKeyvalOptions*
 
@@ -35,3 +35,12 @@
 	}%
 }
 \let\chemical\element
+
+\RequirePackage[version=4,arrows=pgf-filled,
+	textfontname=sffamily,
+	mathfontname=mathsf]{mhchem} % https://mirrors.mit.edu/CTAN/macros/latex/contrib/mhchem/mhchem.pdf
+\newcommand{\centerce}[1]{%
+\begin{center}%
+\ce{#1}%
+\end{center}%
+}
