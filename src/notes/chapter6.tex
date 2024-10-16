@@ -7,6 +7,7 @@
 	title={Thermochemistry},
 	showanswers=true,
 ]{chem122notes}
+\usepackage{tabls}
 
 % Packages
 
@@ -17,7 +18,7 @@ Chapters 1-5 study matter, now we study energy.
 
 Warming your hands with chemical hand warmers involves many of the principles of \emph{thermochemistry}, the study of the relationships between chemistry and energy.
 When you open the package that contains the hand warmer, the contents are exposed to air, and a reaction that gives off heat to its surroundings occurs.
-Most handwarmers involve the oxidation of iron:
+Most handwarmers\label{dfn:chemical-handwarmers} involve the oxidation of iron:
 \[ \ce{4Fe(s) + 3O2(g) -> 2Fe2O3(s)} \]
 
 In this chapter, we look at how chemical reactions can exchange energy with their surroundings and how we can quantify the magnitude of those exchanges.
@@ -53,7 +54,7 @@ In this chapter, we look at how chemical reactions can exchange energy with thei
 	\item $KE = \frac{1}{2}mv^{2}$, $[KE] = [m][v] = \mbox{kg}\times \frac{m}{s}$
 \end{itemize}
 
-\section{sec:1st-law-of-thermodynamics}\label{sec:sec:1st-law-of-thermodynamics}
+\section{1st law of thermodynamics}\label{sec:sec:1st-law-of-thermodynamics}
 \begin{itemize}
 	\item The total energy of the universe is constant $\rightarrow$ Energy is neither created, nor destroyed, universe does not exchange energy with anything else.
 	\item According to the 1st law, a device that continually produces energy with no energy input cannot exist.
@@ -68,5 +69,89 @@ In this chapter, we look at how chemical reactions can exchange energy with thei
 	the distance, however, is not a state function as you can take any route.
 \end{itemize}
 
+%\begin{table}[H]
+%	\centering
+%	\caption{Specific Heat Capcaity Table}
+%	\label{tab:specific-heat}
+%	\begin{tabular}{|c|c|}
+%		\textbf{Substance} & \textbf{Specific Heat Capacity at 25\textdegree{}C in J/g\textdegree{}C}\\
+%		{H2} gas & 14.267\\
+%		{He} gas & 5.300\\
+%		{H2O(l)} & 4.184\\
+%	\end{tabular}
+%\end{table}
+
+\section{Work: Pressure Volume Work}\label{sec:work:-pressure-volume-work}
+\begin{equation}
+	\begin{aligned}
+		W &= -P\Delta V\\
+		  &= -P(V_{f} - V_{i})\\
+		  &= P(V_{i} - V_{f})\\
+	\end{aligned}
+	\label{eq:pressue-volume-work}
+\end{equation}
+Combustion of gasoline causes gases within the cylinders of an automobile engine to expand, pushing the piston outward and moving the car wheels.
+
+\section{Enthalpy}\label{sec:enthalpy}
+\definition{Enthalpy}{Heat evolved in a chemical reaction at constant pressure.}
+
+Firstly, at constant volume (chemical rxn [reaction] in a sealed container):
+\begin{equation*}
+\begin{aligned}
+	W &= -P\Delta V\\
+	  &= 0\\
+	\Delta E_{rxn} &= q_{v} + w\\
+						 &= q_{v}
+\end{aligned}
+\end{equation*}
+When chemical reactions occur open to the atmosphere at constant pressure, both $q$ and $w$ are involved in $\Delta E_{rxn}$.
+
+We are often interested only in $q$, not $w$.
+For example, when we burn natural gas in the furnace to heat our homes.
+
+Enthalpy $H$, a new thermodynamic quantity, is thus introduced.
+\begin{equation}
+	\begin{aligned}
+		H &= E + PV\\
+		\Delta H &= \Delta E + P\Delta V\\
+		&= (q_{p} + W) + P\Delta V\\
+		&= q_{p} + W - W\\
+		&= q_{p}
+	\end{aligned}
+	\label{eq:enthalpy}
+\end{equation}
+
+\section{$\Delta E$ and $\Delta H$}\label{sec:e-and-h}
+\begin{itemize}
+	\item Conceptually they are similar
+	\item $\Delta E$ is a measure of all of the energy ($q$ and $w$) exchanged with the surroundings
+	\item $\Delta H$ is only a measure of heat exchanged ($q$) under conditions of constant pressure.
+	\item For chemical rxs that do not exchange much work with the surroundings, i.e., $W=-P\Delta V$ is small as $\Delta V$ is small, $\Delta H \approx \Delta E$ (nearly identical)
+	\item For chemical reactions that produce or consume large amounts of gas, hence have large $\Delta V$ (and hence large $W$), $\Delta H \neq \Delta E$ (significantly different)
+\end{itemize}
+
+\section{Exothermic and Endothermic Reactions}\label{sec:exothermic-and-endothermic-reactions}
+\begin{itemize}
+	\item $\Delta H > 0$ is an endothermic reaction, chemical reaction \emph{absorbs} heat from the surroundings.
+	\begin{itemize}
+		\item Example: The reaction that occurs in the chemical cold packs used to ice athletic injuries $\rightarrow$ The surroundings, including the bruised wrist, get colder as the cold pack absorbs energy.
+	\end{itemize}
+	\item $\Delta H < 0$ is an exothermic reaction, chemical reaction \emph{radiates} heat to its surroundings.
+	\begin{itemize}
+		\item Example: \hyperref[dfn:chemical-handwarmers]{Chemical handwarmers}.
+	\end{itemize}
+\end{itemize}
+
+\section{Stoichiometry involving $\Delta H$: Thermochemical Equations}\label{sec:stoichiometry-involving-$delta-h$:-thermochemical-equations}
+\centerce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(g)}
+\begin{equation*}
+\begin{aligned}
+	\Delta H_{rxn} &= -2044 kJ\\
+	1 \mbox{ mol } \ce{C3H8} &= -2044 kJ\\
+	5 \mbox{ mol } \ce{O2} &= -2044 kJ\\
+	1 \mbox{ mol } \ce{O2} &= \frac{-2044}{5} kJ\\
+	 &= -408.8 kJ\\
+\end{aligned}
+\end{equation*}
 
 \end{document}
