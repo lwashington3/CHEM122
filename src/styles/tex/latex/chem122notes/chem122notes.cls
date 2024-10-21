@@ -36,3 +36,5 @@
 \ifchemnotes@showanswers\else
 \RenewEnviron{answer}{}
 \fi
+
+\newcommand{\hf}{(\Delta H_{f}\mbox{\textdegree})}

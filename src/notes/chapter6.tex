@@ -7,7 +7,6 @@
 	title={Thermochemistry},
 	showanswers=true,
 ]{chem122notes}
-\usepackage{tabls}
 
 % Packages
 
@@ -52,6 +51,8 @@ In this chapter, we look at how chemical reactions can exchange energy with thei
 \section{Units of Energy}\label{sec:units-of-energy}
 \begin{itemize}
 	\item $KE = \frac{1}{2}mv^{2}$, $[KE] = [m][v] = \mbox{kg}\times \frac{m}{s}$
+	\item 1 Joule (J) = $1\ \frac{\mbox{kg } \mbox{m}^{2}}{\mbox{s}^{2}}$
+	\item 1 calorie = 4.184 J
 \end{itemize}
 
 \section{1st law of thermodynamics}\label{sec:sec:1st-law-of-thermodynamics}
@@ -68,6 +69,53 @@ In this chapter, we look at how chemical reactions can exchange energy with thei
 	\item Elevation of 10,000 ft, for example, is a state function no matter how you climbed it;
 	the distance, however, is not a state function as you can take any route.
 \end{itemize}
+
+\begin{equation*}
+\begin{aligned}
+	\Delta E &= E_{final} - E_{initial}\\
+	\ce{C(s)} + \ce{O2(g)} &\ce{->} \ce{CO2(g)}\\
+	\Delta E &= E_{product} - E_{reactant}\\
+\end{aligned}
+\end{equation*}
+
+\begin{tikzpicture}
+	\begin{scope}\tikzset{every node/.style={rectangle,draw}}
+	\node (sys) at (0, 0) {system};
+	\node (surr) at (10,0 ) {surroundings};
+		%		\node (q) at (5, 2) {};
+		%		\node (w) at (5, -2) {};
+	\end{scope}
+	\begin{scope}
+		\path [<->,below,yshift=5] (sys) edge node{heat ($q$)} (surr);
+		\path [<->,above,yshift=-5] (surr) edge node{work ($w$)} (sys);
+	\end{scope}
+\end{tikzpicture}
+
+\begin{itemize}
+	\item System can exchange energy with its surrounding through heat and work.
+	\item According to 1st law of thermodynamics
+\end{itemize}
+\begin{equation}
+	\Delta E = q + w
+	\label{eq:thermodynamics-first-law}
+\end{equation}
+
+\section{Quantifying Heat and Work}\label{sec:quantifying-heat-and-work}
+Experimentally, $q\propto \Delta t$ where $q$ is heat absorbed by the system and $\Delta t$ is the change of temperature.
+\begin{equation}
+	q = c \times \Delta t
+	\label{eq:heat-capacity}
+\end{equation}
+where $c$ is the heat capacity (quantity of heat required to change temperature by 1\textdegree{}C).
+
+\begin{equation}
+	\begin{aligned}
+		q &= m \times s \times \Delta t\\
+		[J] &= [g] \times \left[ \frac{J}{g\textdegree C} \right] \times [\textdegree C]
+	\end{aligned}
+	\label{eq:heat-mass}
+\end{equation}
+where $m$ is the mass and $s$ is the specific heat.
 
 %\begin{table}[H]
 %	\centering
@@ -113,7 +161,7 @@ Enthalpy $H$, a new thermodynamic quantity, is thus introduced.
 \begin{equation}
 	\begin{aligned}
 		H &= E + PV\\
-		\Delta H &= \Delta E + P\Delta V\\
+		\Delta H &= \Delta E + P\Delta V \ \ \ (\mbox{at constant pressure})\\
 		&= (q_{p} + W) + P\Delta V\\
 		&= q_{p} + W - W\\
 		&= q_{p}
@@ -126,7 +174,7 @@ Enthalpy $H$, a new thermodynamic quantity, is thus introduced.
 	\item Conceptually they are similar
 	\item $\Delta E$ is a measure of all of the energy ($q$ and $w$) exchanged with the surroundings
 	\item $\Delta H$ is only a measure of heat exchanged ($q$) under conditions of constant pressure.
-	\item For chemical rxs that do not exchange much work with the surroundings, i.e., $W=-P\Delta V$ is small as $\Delta V$ is small, $\Delta H \approx \Delta E$ (nearly identical)
+	\item For chemical rxns that do not exchange much work with the surroundings, i.e., $W=-P\Delta V$ is small as $\Delta V$ is small, $\Delta H \approx \Delta E$ (nearly identical)
 	\item For chemical reactions that produce or consume large amounts of gas, hence have large $\Delta V$ (and hence large $W$), $\Delta H \neq \Delta E$ (significantly different)
 \end{itemize}
 
@@ -153,5 +201,31 @@ Enthalpy $H$, a new thermodynamic quantity, is thus introduced.
 	 &= -408.8 kJ\\
 \end{aligned}
 \end{equation*}
+
+\section{Hess' Law}\label{sec:hess'-law}
+
+\section{Enthalpies of Reaction From Standard Heats of Formation}\label{sec:enthalpies-of-reaction-from-standard-heats-of-formation}
+\begin{itemize}
+	\item \emph{Standard state}
+	\begin{itemize}
+		\item For a gas: pure gas at 1 atm
+		\item For a liquid or solid: pure substance in its most stable form at 1 atm (and other 25\textdegree{}C).
+		\item For a substance in solution: 1M concentration.
+	\end{itemize}
+	\item Standard enthalpy change $(\Delta H$\textdegree$) \rightarrow \Delta H$ for a process when all reactants and products are in their standard states
+	\item Standard Enthalpy of Formation $\hf$
+	\begin{itemize}
+		\item For a pure compound: $\Delta H$ when 1 mole of the compound forms from its constituent elements in their standard states
+		\item For a pure element: $\hf = 0$
+		\[ \ce{C(s, graphite) + 2H2(g) -> CH4(g)}\ \ \ \hf = -74.6 \mbox{ kJ/mol} \]
+	\end{itemize}
+	\item Standard enthalpy change for a reaction ($\Delta H_{rxn}$)
+	\begin{equation*}
+	\begin{aligned}
+		\ce{aA + bB} &\ce{-> cC + dD}\\
+		\Delta H_{rxn} &= \left[  \right] - \left[  \right]\\
+	\end{aligned}
+	\end{equation*}
+\end{itemize}
 
 \end{document}
