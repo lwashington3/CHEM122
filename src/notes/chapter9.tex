@@ -1,0 +1,125 @@
+%! Author = Len Washington III
+%! Date = 11/6/24
+
+% Preamble
+\documentclass[
+	chapter=9,
+	title={Basic Concepts of Chemical Bonding},
+	showanswers=true,
+]{chem122notes}
+
+% Packages
+
+% Document
+\begin{document}
+
+\section{Outline}\label{sec:outline-9}
+
+\begin{itemize}
+	\item Lewis symbols and valence electrons
+	\item Ionic bonding - electrostatic attractions between ions of opposite charge
+	\item Covalent bonding - sharing of one or more electron pairs between atoms
+	\item Bond polarity and electronegativity
+	\item Drawing Lewis structures
+	\item Resonances structures, exceptions to the octet rule, and strengths of covalent bonds
+\end{itemize}
+
+\section{Chemical Bonds}\label{sec:chemical-bonds}
+\definition{Chemical bond}{a strong attractive fource that exists between atoms in a molecule.}
+The three types of chemical bonds are as follows:
+\begin{description}[font=\emph]
+	\item[ionic bond] a bond between oppositely charged ions.
+	The ions are formed from atoms by transfer of one or more electrons.
+	\item[covalent bond]
+\end{description}
+
+\section{Lewis Symbols}\label{sec:lewis-symbols}
+\begin{itemize}
+	\item The \emph{valence electrons}, those that reside in the outermost shell of an atom, are responsible for chemical bonding.
+	\item \emph{Lewis symbol} (electron dot symbol) The chemical symbol for an element, with a dot for each valence electron.
+	\item Dots are placed on the four sides of the chemical symbol, where each side can accommodate up to two electrons.
+\end{itemize}
+
+\section{Ionic Bonding}\label{sec:ionic-bonding}
+\begin{itemize}
+	\item The combination of sodium metal and chlorine gas results in a violent
+	\chemfig{\charge{90=\.}{Li}}
+\end{itemize}
+
+\section{Lattice Energy}\label{sec:lattice-energy}
+The energy associated with electrostatic interactions is governed by Coulomb's Law:
+\begin{equation}
+	E_{el} = \frac{\kappa Q_{1}Q_{2}}{d}
+	\label{eq:coulombs-law}
+\end{equation}
+\begin{itemize}
+	\item Lattice energy increases with the charge on the ions.
+	\item It also increases with decreasing size of ions.
+	\item See the worked example entitled~\nameref{sec:magnitudes-of-lattice-energies}.
+\end{itemize}
+
+\section{Magnitudes of Lattice Energies}\label{sec:magnitudes-of-lattice-energies}
+Which substance would you expect to have the greatest lattice energy, \ce{MgF2}, \ce{CaF2}, or \ce{ZrO2}?
+
+\begin{answer}
+	\reaction{
+		MgF2(s) -> Mg^{2+}(g) + 2F-(g)
+	}
+	Because the product of the charge, $Q_{1}Q_{2}$, appears in the numerator of the equation above, the lattice energy will increase dramatically when the charges of the ions increase.
+	Thus,
+	\reaction{
+		MgF2 \ \ Q1&=+2 \ \ Q2 &= -1\\
+		CaF2 \ \ Q1&=+2 \ \ Q2 &= -1\\
+		ZrO2 \ \ Q1&=+4 \ \ Q2 &= -2\\
+	}
+	\reaction{CaF2 $<$ MgF2 $<$ ZrO2}
+\end{answer}
+
+\begin{table}[H]
+	\centering
+	\caption{Lattice Energies for Some Ionic Compounds}
+	\label{tab:lattice-energies-for-ionic-compounds}
+	\begin{tabular}{l l|l l}
+		\textbf{Compound} & \textbf{Lattice Energy (kJ/mol)} & \textbf{Compound} & \textbf{Lattice Energy (kJ/mol)}\\
+		\hline
+		\ce{LiF} & 1030 & \ce{MgCl2} & 2326 \\
+		\ce{LiCl} & 834 & \ce{SrCl2} & 2127 \\
+		\ce{LiI} & 730 & & \\
+		\ce{NaF} & 910 & \ce{MgO} & 3795 \\
+		\ce{} &  & \ce{3414} &  \\
+		\ce{} &  & \ce{3217} &  \\
+		\ce{} &  & & \\
+		\ce{} &  & \ce{7547} &  \\
+		\ce{} &  & & \\
+		\ce{} &  & & \\
+		\ce{} &  & & \\
+		\ce{} &  & & \\
+	\end{tabular}
+\end{table}
+
+\section{Covalent Bonding}\label{sec:covalent-bonding}
+\begin{itemize}
+	\item In covalent bonds, atoms share electrons.
+	\item There are several electrostatic interactions in these bonds:
+	\begin{itemize}
+		\item Attractions between electrons and positive nuclei.
+		\item Repulsions between electrons
+		\item Repulsions between nuclei
+		\item Attractive forces must outweigh the repulsive ones
+	\end{itemize}
+\end{itemize}
+
+\section{Lewis Structures}\label{sec:lewis-structures}
+\begin{itemize}
+	\item Consider two Hydrogen atoms coming together to form a covalently bonded \ce{H2} molecule:
+	\reaction{ \chemfig{\charge{0=\.}{H}} + \chemfig{\charge{180=\.}{H}} -> }
+	\item The \ce{H2} molecule on the right, with its two electrons, exhibits the noble-gas configuration
+	\item Consider two chlorine atoms coming together to form a covalently bonded \ce{Cl2} molecule:
+	\reaction{ \chemfig{\charge{0=\.,90=\.\.,180=\.\.,270=\.\.}{Cl} + \charge{0=\.\.,90=\.\.,180=\.,270=\.\.}{Cl}} -> }
+	\item Each chlorine atom on the
+\end{itemize}
+
+\section{Typical Bonding Motifs}\label{sec:typical-bonding-motifs}
+Typical bonding motifs above
+
+\end{document}

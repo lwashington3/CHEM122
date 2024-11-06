@@ -7,7 +7,7 @@
 	title={Quantum Theory {\&} the Electronic Structure of Atoms},
 	showanswers=true,
 ]{chem122notes}
-\usepackage{tabls}
+\usepackage{siunitx}
 
 % Packages
 
@@ -92,22 +92,22 @@
 	where $c$ is the speed of light, $\lambda$ (lambda) is the wavelength, and $\nu$ (nu) is the frequency.
 \end{itemize}
 
-%\begin{table} % FIXME: Get the wavelength table working
-%	\centering
-%	\caption{Common Wavelength Units}
-%	\label{tab:common-wavelength-units}
-%	\begin{tabular}{llll}
-%		\textbf{Unit} & \textbf{Symbol} & \textbf{Length (m)} & \textbf{Type of Radiation}\\
-%%		\hrule
-%		Angstrom & \angstrom & $10^{-10}$ & X-ray\\
-%		Nanometer & nm & $10^{-9}$ & Ultraviolet, visible\\
-%		Micrometer & $\mu$m & $10^{-6}$ & Infrared\\
-%		Millimeter & mm & $10^{-3}$ & Microwave\\
-%		Centimeter & cm & $10^{-2}$ & Microwave\\
-%		Meter & m & $1$ & TV, radio\\
-%		Kilometer & km & $1000$ & Radio\\
-%	\end{tabular}
-%\end{table}
+\begin{table}
+	\centering
+	\caption{Common Wavelength Units}
+	\label{tab:common-wavelength-units}
+	\begin{tabular}{llll}
+		\textbf{Unit} & \textbf{Symbol} & \textbf{Length (m)} & \textbf{Type of Radiation}\\
+		\hline
+		Angstrom & \si{\angstrom} & $10^{-10}$ & X-ray\\
+		Nanometer & nm & $10^{-9}$ & Ultraviolet, visible\\
+		Micrometer & $\mu$m & $10^{-6}$ & Infrared\\
+		Millimeter & mm & $10^{-3}$ & Microwave\\
+		Centimeter & cm & $10^{-2}$ & Microwave\\
+		Meter & m & $1$ & TV, radio\\
+		Kilometer & km & $1000$ & Radio\\
+	\end{tabular}
+\end{table}
 
 \section{Common Frequency Unit}\label{sec:common-frequency-unit}
 \begin{itemize}
@@ -176,7 +176,7 @@
 \section{Line Emission Spectrum of Hydrogen}\label{sec:line-emission-spectrum-of-hydrogen}
 \begin{itemize}
 	\item \definition{Line spectrum}{a spectrum that contains radiation at only specific wavelengths.}
-	\item In the schematic above, a potential si applied to a sealed tube of hydrogen at reduced pressure.
+	\item In the schematic above, a potential is applied to a sealed tube of hydrogen at reduced pressure.
 	Passing this light through a prism results in a 4 line pattern, each with its own specific wavelength.
 	The wavelengths in the hydrogen $\dots$
 \end{itemize}
@@ -294,7 +294,7 @@ Model based on the following three postulates
 	The \emph{Heisenberg uncertainty principle} states that there is an inherent uncertainty in the precision with which we can simultaneously specify the position and momentum of extremely small particles, such as an electron.
 	\item Mathematically:
 	\begin{equation}
-		\Delta x \cdot \Delta (mv) \geq \frac{h}{2\pi}
+		\Delta x \cdot \Delta (mv) \geq \frac{h}{4\pi}
 		\label{eq:heisenberg-uncertainty-principle}
 	\end{equation}
 	\item where $\Delta x$ is the uncertainty in the particle's position and $\Delta (mv)$ is the uncertainty in its momentum.
@@ -327,8 +327,17 @@ Model based on the following three postulates
 	\begin{description}[font=\emph]
 		\item[Principal quantum number $n$] that can have integral values of 1, 2, 3, $\dots$.
 		As $n$ increases, the orbital becomes larger and the electron is further from the nucleus.
+		\begin{itemize}
+			\item Energy and size of the electron.
+		\end{itemize}
 		\item[Angular momentum quantum number $l$] can take on integral values from 0 to $n-1$ for each defined value of $n$.
+		\begin{itemize}
+			\item Shape of the home
+		\end{itemize}
 		\item[Magnetic quantum number $m_{l}$] that can take values of $-l$ to $+l$, including 0.
+		\begin{itemize}
+			\item Orientation
+		\end{itemize}
 		\item[Spin magnetic quantum number $m_{s}$] are two possible values are $+\frac{1}{2}$ (spin pointing up) and $-\frac{1}{2}$ (spin pointing down).
 	\end{description}
 \end{itemize}
@@ -339,31 +348,31 @@ Model based on the following three postulates
 	\item[Subshell] A set of orbitals that have the same $n$ and $l$ values.
 \end{description}
 
-%\begin{table}[H] % FIXME: This table is also messed up
-%	\centering
-%	\caption{Value of $l$ and Corresponding Letter Designation}
-%	\label{tab:l-letter-designations}
-%	\begin{tabular}{cc}
-%		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
-%		0 & $s$\\
-%		1 & $p$\\
-%		2 & $d$\\
-%		3 & $f$\\
-%	\end{tabular}
-%\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Value of $l$ and Corresponding Letter Designation}
+	\label{tab:l-letter-designations}
+	\begin{tabular}{cc}
+		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
+		0 & $s$\\
+		1 & $p$\\
+		2 & $d$\\
+		3 & $f$\\
+	\end{tabular}
+\end{table}
 
-%\begin{table}[H] % FIXME: This table too
-%	\centering
-%	\caption{Number of Orbitals in a Subshell}
-%	\label{tab:subshell-orbitals}
-%	\begin{tabular}{cc}
-%		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
-%		0 & $s$\\
-%		1 & $p$\\
-%		2 & $d$\\
-%		3 & $f$\\
-%	\end{tabular}
-%\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Number of Orbitals in a Subshell}
+	\label{tab:subshell-orbitals}
+	\begin{tabular}{cc}
+		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
+		0 & s\\
+		1 & p\\
+		2 & d\\
+		3 & f\\
+	\end{tabular}
+\end{table}
 
 \section{Electron Configurations}\label{sec:electron-configurations}
 \begin{itemize}

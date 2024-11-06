@@ -39,8 +39,27 @@
 \RequirePackage[version=4,arrows=pgf-filled,
 	textfontname=sffamily,
 	mathfontname=mathsf]{mhchem} % https://mirrors.mit.edu/CTAN/macros/latex/contrib/mhchem/mhchem.pdf
+\RequirePackage{chemfig}
 \newcommand{\centerce}[1]{%
 \begin{center}%
 \ce{#1}%
 \end{center}%
+}
+
+\newcommand{\reaction}[1]%
+{%
+	\begin{equation*}%
+	\begin{aligned}%
+		\ce{#1}%
+	\end{aligned}%
+	\end{equation*}%
+}
+
+\newcommand{\reactionnumber}[1]%
+{%
+	\begin{equation}%
+	\begin{aligned}%
+		\ce{#1}%
+	\end{aligned}%
+	\end{equation}%
 }
