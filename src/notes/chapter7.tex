@@ -92,7 +92,7 @@
 	where $c$ is the speed of light, $\lambda$ (lambda) is the wavelength, and $\nu$ (nu) is the frequency.
 \end{itemize}
 
-\begin{table}
+\begin{table}[H]
 	\centering
 	\caption{Common Wavelength Units}
 	\label{tab:common-wavelength-units}
@@ -132,7 +132,7 @@
 		E = h \cdot \nu
 		\label{eq:planck-radiation}
 	\end{equation}
-	where $h=6.626 \times 10^{-34} J\times s$ is Planck's constant
+	where $h=6.626 \times 10^{-34} J\times s$ is Planck's constant\label{dfn:plancks-constant}.
 \end{itemize}
 
 \section{Photoelectric Effect}\label{sec:photoelectric-effect}
@@ -178,7 +178,7 @@
 	\item \definition{Line spectrum}{a spectrum that contains radiation at only specific wavelengths.}
 	\item In the schematic above, a potential is applied to a sealed tube of hydrogen at reduced pressure.
 	Passing this light through a prism results in a 4 line pattern, each with its own specific wavelength.
-	The wavelengths in the hydrogen $\dots$
+	The wavelengths in the hydrogen spectrum are: 410 nm (violet), 434 nm (blue), 486 nm (blue-green), and 656 nm (red).
 \end{itemize}
 
 \begin{figure}[H]
@@ -196,7 +196,7 @@
 \end{figure}
 
 \section{Niels Bohr's Model of the Hydrogen Atom}\label{sec:niels-bohr's-model-of-the-hydrogen-atom}
-Model based on the following three postulates
+Model based on the following three postulates:
 \begin{itemize}
 	\item Only orbits of certain radii, corresponding to certain definite energies, are permitted for the electron in the hydrogen atom.
 	\item An electron in a permitted orbit has a specific energy and is in an ``allowed'' energy state.
@@ -223,7 +223,7 @@ Model based on the following three postulates
 		\label{eq:bohr-energy-state}
 	\end{equation}
 	\begin{itemize}
-		\item $h$, $c$ and $R_{H}$ are Planck's constant, the speed of light, and Rydberg's constant, respectively.
+		\item $h$, $c$ and $R_{H}$ are \hyperref[dfn:plancks-constant]{Planck's constant}, the speed of light, and Rydberg's constant, respectively.
 		\item $n$ is called the \emph{principal quantum number}, and takes on whole integer values in $[1, \infty)$.
 		\item The lowest energy state $(n=1)$ is called the \emph{ground state.}
 		\item When an electron occupies the $n=2$ orbit or higher, the atom is said to be in an \emph{excited state}.
@@ -252,7 +252,7 @@ Model based on the following three postulates
 
 \begin{itemize}
 	\item Notice that the energy is lowest (most negative) for $n = 1$.
-	\item The energy difference between the \textit{final} and \emph{initial} states is given by the \emph{following equation:}
+	\item The energy difference between the \textit{final} and \textit{initial} states is given by the \emph{following equation:}
 	\begin{equation}
 		\begin{aligned}
 			\Delta E &= E_{final} - E_{initial}\\
@@ -261,7 +261,7 @@ Model based on the following three postulates
 		\end{aligned}
 		\label{eq:electronic-transition-difference}
 	\end{equation}
-	\item Substituting~\eqref{eq:bohr-energy-state} into the above equation, while taking into account that $\nu = c / \lambda$, the following results:
+	\item Substituting~\eqref{eq:bohr-energy-state} into the above equation, while taking into account that~\eqref{eq:wavelength-frequency-relationship}, the following results:
 	\begin{equation}
 		\begin{aligned}
 			\Delta E &= h\nu\\
@@ -272,14 +272,17 @@ Model based on the following three postulates
 		\label{eq:electron-transition}
 	\end{equation}
 	\item Another useful equation for directly calculating wavelength is as follows:
-	\[ \frac{1}{\lambda} = R_{H}\left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right) \]
+	\begin{equation}
+		\frac{1}{\lambda} = R_{H}\left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right)
+		\label{eq:wavelength-rydberg}
+	\end{equation}
 \end{itemize}
 
 \section{The Wave Behavior of Matter}\label{sec:the-wave-behavior-of-matter}
 \begin{itemize}
 	\item Louis de Broglie (1892-1987) suggested that a stream of particles should also exhibit properties of a wave.
 	\item He proposed that the characteristic wavelength of a particle (e.g., an electron) depends on its mass $(m)$ and velocity $(v)$.
-	The quantity $mv$ is the \emph{momentum} and $h$ is simply Planck's constant.
+	The quantity $mv$ is the \emph{momentum} and $h$ is simply \hyperref[dfn:plancks-constant]{Planck's constant}.
 	\begin{equation}
 		\lambda = \frac{h}{mv}
 		\label{eq:wave-behavior-of-matter}
@@ -302,9 +305,9 @@ Model based on the following three postulates
 
 \section{Quantum Mechanics and Atomic Orbitals}\label{sec:quantum-mechanics-and-atomic-orbitals}
 \begin{itemize}
-	\item Erwin Schr{\:o}dinger (1887-1961), an Austrian physicist, developed an equation to describe both the wave- and particle-like behavior of the electron.
+	\item Erwin Schr{\"o}dinger (1887-1961), an Austrian physicist, developed an equation to describe both the wave- and particle-like behavior of the electron.
 	\item Requires the use of complex calculus.
-	\item Solving the Schr{\:o}dinger equation provides a series of mathematical functions called \emph{wave functions} that describe the electron in an atom.
+	\item Solving the Schr{\"o}dinger equation provides a series of mathematical functions called \emph{wave functions} that describe the electron in an atom.
 	\item The wave functions are denoted by the lowercase Greek letter \emph{$\psi$} (psi).
 	\item \emph{$\psi^{2}$} is the probability or electron density.
 	It relates to the probability of finding an electron in a certain region of space at a given instant.
@@ -350,29 +353,64 @@ Model based on the following three postulates
 
 \begin{table}[H]
 	\centering
-	\caption{Value of $l$ and Corresponding Letter Designation}
+	\caption{Value of $l$, Corresponding Letter Designation and Number of Orbitals in a Subshell}
 	\label{tab:l-letter-designations}
-	\begin{tabular}{cc}
-		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
-		0 & $s$\\
-		1 & $p$\\
-		2 & $d$\\
-		3 & $f$\\
+	\begin{tabular}{ccc}
+		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label} & \textbf{Number of Orbitals in Subshell}\\
+		0 & $s$ & 1\\
+		1 & $p$ & 3\\
+		2 & $d$ & 5\\
+		3 & $f$ & 7\\
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\centering
-	\caption{Number of Orbitals in a Subshell}
-	\label{tab:subshell-orbitals}
-	\begin{tabular}{cc}
-		\textbf{Value of $l$} & \textbf{Corresponding Subshell Label}\\
-		0 & s\\
-		1 & p\\
-		2 & d\\
-		3 & f\\
+	\caption{Relationship among $n$, $l$, and $m_{l}$ values}
+	\label{tab:quantum-number-relationships}
+	\begin{tabular}{C{0.05\textwidth} p{0.11\textwidth} p{0.15\textwidth} p{0.22\textwidth} p{0.18\textwidth} p{0.19\textwidth}}
+		$n$ & \textbf{Possible Values of $l$} & \textbf{Subshell Designation} & \textbf{Possible Values of $m_{l}$} & \textbf{Number of Orbitals in Subshell} & \textbf{Total Number of Orbitals in Shell}\\
+		1 & 0 & $1s$ & 0 & 1 & 1 \\
+		2 & 0 & $2s$ & 0 & 1 \\
+		  & 1 & $2p$ & $1, 0, -1$ & 3 & 4 \\
+		3 & 0 & $3s$ & 0 & 1 \\
+		  & 1 & $3p$ & $1, 0, -1$ & 3 \\
+		  & 2 & $3d$ & $2, 1, 0, -1, -2$ & 5 & 9 \\
+		4 & 0 & $4s$ & 0 & 1 \\
+		  & 1 & $4p$ & $1, 0, -1$ & 3 \\
+		  & 2 & $4d$ & $2, 1, 0, -1, -2$ & 5 \\
+		  & 3 & $4d$ & $3, 2, 1, 0, -1, -2, -3$ & 7 & 16 \\
 	\end{tabular}
 \end{table}
+
+\section{The $p$ Orbitals}\label{sec:the-p-orbitals}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter7/d-orbitals}
+	\caption{The $p$ Orbitals}
+	\label{fig:p-orbitals}
+\end{figure}
+
+Note the three different orientations $(m_{l}:{ }-1, 0, 1)$ on a Cartesian coordinate axis system!
+In each orbital, there are two lobes that are separated by a nodal plane (a point at which the electron density is zero).
+
+\section{The $d$ orbitals}\label{sec:the-d-orbitals}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter7/d-orbitals}
+	\caption{The $d$ Orbitals}
+	\label{fig:d-orbitals}
+\end{figure}
+These are the representations of the five $d$ orbitals $(m_{l}:{ }-2, -1, 0, 1, 2)$
+
+\section{Many-Electron Atoms - Relative Orbital Energy Levels}\label{sec:many-electron-atoms---relative-orbital-energy-levels}
+The energies follow the order:
+\begin{equation*}
+\begin{aligned}
+	&ns < np < nd < nf\\
+	&\mbox{e.g., } 3s < 3p < 3d
+\end{aligned}
+\end{equation*}
 
 \section{Electron Configurations}\label{sec:electron-configurations}
 \begin{itemize}
@@ -380,5 +418,14 @@ Model based on the following three postulates
 	\item \definition{Pauli Exclusion Principle}{a maximum of two electrons can be placed in an orbital and must have opposite spin.}
 	\item \definition{Hunds Rule}{for degenerate orbitals, the lowest energy is attained when the number of electrons with the same spin is maximized.}
 \end{itemize}
+
+\section{Subshell Filling Order}\label{sec:subshell-filling-order}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter7/periodic-table}
+	\caption{Periodic Table Levels}
+	\label{fig:period-table-levels}
+\end{figure}
+
 
 \end{document}
