@@ -7,6 +7,7 @@
 	title={Basic Concepts of Chemical Bonding},
 	showanswers=true,
 ]{chem122notes}
+\usepackage{siunitx}
 
 % Packages
 
@@ -115,11 +116,109 @@ Which substance would you expect to have the greatest lattice energy, \ce{MgF2},
 	\reaction{ \chemfig{\charge{0=\.}{H}} + \chemfig{\charge{180=\.}{H}} -> }
 	\item The \ce{H2} molecule on the right, with its two electrons, exhibits the noble-gas configuration
 	\item Consider two chlorine atoms coming together to form a covalently bonded \ce{Cl2} molecule:
-	\reaction{ \chemfig{\charge{0=\.,90=\.\.,180=\.\.,270=\.\.}{Cl} + \charge{0=\.\.,90=\.\.,180=\.,270=\.\.}{Cl}} -> }
-	\item Each chlorine atom on the
+	\reaction{ \chemfig{\charge{0=\.,90=\:,180=\:,270=\:}{Cl} + \charge{0=\:,90=\:,180=\.,270=\:}{Cl}} -> \chemfig{\charge{0=\:,90=\:,180=\:,270=\:}{Cl}\charge{0=\:,90=\:,270=\:}{Cl}}}
+	\item Each chlorine atom on the right now has a \textit{complete octet} of electrons by sharing the bonding electron pair.
+	It achieves the noble gas configuration of argon (Ar).
+	Again, the shared pair of electrons can be represented by a single bond, as shown below.
 \end{itemize}
 
 \section{Typical Bonding Motifs}\label{sec:typical-bonding-motifs}
 Typical bonding motifs above
+
+\section{Bond Polarity and Electronegativity}\label{sec:bond-polarity-and-electronegativity}
+\begin{itemize}
+	\item Molecules such as \ce{H2}, \ce{N2}, \ce{Cl2}, etc are said to be \textbf{nonpolar}.
+	\item \emph{A nonpolar covalent bond} is one in which the electrons are shared equally between two atoms.
+	\item On the other hand, \emph{a polar covalent bond} is one in which one of the atoms exerts a greater attraction for the bonding electrons than the other.
+	\item In other words, there exists a bond between atoms of different \emph{electronegativities}.
+\end{itemize}
+
+\section{Electronegativity}\label{sec:electronegativity}
+\begin{itemize}
+	\item \definition{Electronegativity}{the ability of atoms}
+	\item On the periodic table
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\caption{Electronegativity and Bond Polarity}
+	\label{tab:electronegativity}
+	\begin{tabular}{|*{4}{c|}}
+		\hline
+		\textbf{Compound} & \textbf{\ce{F2}} & \textbf{\ce{HF}} & \textbf{\ce{LiF}}\\
+		\hline
+		Electronegativity & 4.0 - 4.0 = 0 & 4.0 - 2.1 = 1.9 & 4.0 - 1.0 = 3.0\\
+		\hline
+		Type of bond & Nonpolar covalent & Polar covalent & Ionic\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Polar Covalent Bonds}
+	\label{tab:polar-covalent-bonds}
+	\begin{tabular}{p{0.2\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.25\textwidth}}
+		\textbf{Compound} & \textbf{Bond Length (\si{\angstrom})} & \textbf{Electronegativity} & \textbf{Dipole Moment (D)}\\
+		\hline
+		\ce{HF}  & 0.92 & 1.9 & 1.82\\
+		\ce{HCl} & 1.27 & 0.9 & 1.08\\
+		\ce{HBr} & 1.41 & 0.7 & 0.82\\
+		\ce{HI}  & 1.61 & 0.4 & 0.44\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Writing Lewis Structures}\label{sec:writing-lewis-structures}
+\reaction{\chemfig{H-H}}
+\reaction{\chemfig{\charge{90=\:,180=\:,270=\:}{Cl}-\charge{0=\:,90=\:,270=\:}{Cl}}}
+
+\begin{enumerate}
+	\item
+	\item The central atom is the \emph{least} electronegative element that isn't Hydrogen.
+	Connect the other atoms to it by single bonds.
+	\item Fill the octets of the outer atoms.
+	\begin{itemize}
+		\item \textcolor{red}{How many electrons have you accounted for in the above structure?} \begin{answer}24\end{answer}
+		\item \textcolor{red}{How many do you have left?} \begin{answer}2\end{answer}
+		\item Fill in the octet of the central atom.
+		\item If you run out of electrons before the central atom has an octet: form multiple bonds until it does
+		\reaction{\chemfig{H-C-\charge{0=\:,90=\:,270=\:}{N}} -> \chemfig{H-C~\charge{0=\:}{N}}}
+	\end{itemize}
+\end{enumerate}
+
+\section{Lewis Structures for Polyatomic Ions}\label{sec:lewis-structures-for-polyatomic-ions}
+Draw the Lewis structures for:
+\begin{enumerate}[label=(\alph*)]
+	\item \ce{ClO2-}
+	\begin{answer}
+	\end{answer}
+	\item \ce{SO4^2-}
+	\begin{answer}
+		6 + 4(6) + 2 = 32 valence electrons
+		\reaction{\chemfig{\charge{90=\:,180=\:,270=\:}{O}-S(-[:90]\charge{0=\:,90=\:,180=\:}{O})(-[:270]\charge{0=\:,180=\:,270=\:}{O})-\charge{0=\:,90=\:,270=\:}{O}}}
+	\end{answer}
+	\item \ce{CO3^2-}
+	\begin{answer}
+		4 + 3(6) + 2 = 24 valence electrons
+		\begin{equation*}
+			\chemfig{([:30]\charge{135=\:,225=\:,315=\:}{O}-) C (=[:90]\charge{45=\:,135=\:}{O})(-[:-30]\charge{45=\:,225=\:,315=\:}{O})} \hfill\ \ \ \ \ \ \ \ \ \ \ \ \ \
+			\chemfig{([:30]\charge{135=\:,315=\:}{O}=) C (-[:90]\charge{0=\:,90=\:,180=\:}{O})(-[:-30]\charge{45=\:,225=\:,315=\:}{O})} \hfill\ \ \ \ \ \ \ \ \ \ \ \ \ \
+			\chemfig{([:30]\charge{135=\:,225=\:,315=\:}{O}-) C (-[:90]\charge{0=\:,90=\:,180=\:}{O})(=[:-30]\charge{45=\:,225=\:}{O})}
+		\end{equation*}
+	\end{answer}
+\end{enumerate}
+
+\section{Resonance}\label{sec:resonance}
+
+\section{Exceptions to the Octet Rule}\label{sec:exceptions-to-the-octet-rule}
+\begin{itemize}
+	\item The three types of systems that don't follow the octet rule are as follows:
+	\begin{itemize}
+		\item Ions or molecules with an odd number of electrons
+		\item Ions or molecules with less than an octet
+		\item Ions or molecules with more than eight valence electrons (an expanded octet)
+	\end{itemize}
+\end{itemize}
 
 \end{document}
