@@ -1,0 +1,25 @@
+%! Author = Len Washington III
+%! Date = 11/16/24
+
+% Preamble
+\documentclass[chapter=0,
+	title={CHEM 122/124 Notes},
+	showanswers=true,
+]{chem122notes}
+
+\renewcommand{\maketitle}{%
+	\chapter{\thetitle}
+}
+
+% Document
+\begin{document}
+
+\tableofcontents
+
+\let\oldbegindocument\document
+\foreach \chap in {4,...,10}{%
+	\ExecuteMetaData[chapter\chap]{Chapter-\chap}
+}
+\let\document\oldbegindocument
+
+\end{document}

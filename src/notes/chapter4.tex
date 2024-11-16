@@ -3,14 +3,18 @@
 
 % Preamble
 \documentclass[
-	chapter=4
+	chapter=4,
+	title={General Chemistry},
 ]{chem122notes}
-\usepackage{cancel}
+\usepackage{chem122}
 
-% Packages
+%<*Chapter-4>
+\chaptersetup{4}{General Chemistry}
 
 % Document
 \begin{document}
+
+\maketitle
 
 \section{Outline}\label{sec:outline}
 \begin{itemize}
@@ -79,7 +83,7 @@ What does one do?
 \end{equation*}
 
 In an acid-base titration, it takes 38.55 mL of 0.650 M perchloric acid (\ce{HClO4}) to completely neutralize 25.00 mol calcium hydroxide (\ce{Ca(OH2)}) solution.
-\[ \ce{Ca(OH2)(aq) + 2HClO4(aq) -> Ca(ClO4)2 (aq) + 2H2O (l) } \]
+\reaction{Ca(OH2)(aq) + 2HClO4(aq) -> Ca(ClO4)2 (aq) + 2H2O (l) }
 \begin{enumerate}[label=\Alph*)]
 	\item How many moles of \ce{HClO4} are needed for the complete neutralization?
 	\begin{equation*}
@@ -136,10 +140,10 @@ In an acid-base titration, it takes 38.55 mL of 0.650 M perchloric acid (\ce{HCl
 \end{table}
 e.g., the molecular compound HCl is a strong acid that dissociates completely in water.
 As a result, HCl is a strong electrolyte.
-\[ \ce{HCl (aq) -> H+(aq) + Cl-(aq)} \]
-e.g., the molecular compound acetic acid, $\element{C}\element{H}[3]\element{C}\element{O}\element{O}\element{H}$, is a weak acid that is only partially dissociated.
+\reaction{HCl (aq) -> H+(aq) + Cl-(aq)}
+e.g., the molecular compound acetic acid, \ce{CH3COOH}, is a weak acid that is only partially dissociated.
 As a result, acetic acid is a weak electrolyte.
-\[ \element{C}\element{H}[3]\element{C}\element{O}\element{O}\element{H} (\mbox{aq.}) \leftrightarrow \element{C}\element{H}[3]\element{C}\element{O}\element{O}^{-} (\mbox{aq.}) + \element{H}^{+} (\mbox{aq.}) \]
+\reaction{CH3OOH (aq.) <-> CH3COO- (aq.) + H+(aq.)}
 
 \begin{itemize}
 	\item Ion concentration can be measured using conductivity.
@@ -194,11 +198,11 @@ As a result, acetic acid is a weak electrolyte.
 		 & \ce{Cl-} & Compounds of \ce{Ag+}, \ce{Hg2^{2+}}, and \ce{Pb^{2+}}\\
 		 & \ce{Br-} & Compounds of \ce{Ag+}, \ce{Hg2^{2+}}, and \ce{Pb^{2+}}\\
 		 & \ce{I-} & Compounds of \ce{Ag+}, \ce{Hg2^{2+}}, and \ce{Pb^{2+}}\\
-		 & \ce{SO4^{2-}} & Compounds of $\element{Sr}^{2+}, \element{Ba}^{2+}, \element{Hg}[2]^{2+}$, and $\element{Pb}^{2+}$\\
+		 & \ce{SO4^{2-}} & Compounds of \ce{Sr^{2+}}, \ce{Ba^{2+}}, \ce{Hg2^{2+}}, and \ce{Pb^{2+}}\\
 		\hline
 		\textbf{Insoluble Ionic Compounds} & & \textbf{Important Exceptions}\\
 		\hline
-		Compounds containing & $\element{S}^{2-}$ & Compounds of $\element{N}\element{H}_{4}^{+}$, the alkali metal cations, $\element{Ca}^{2+},\ \element{Sr}^{2+}$, and $\element{Ba}^{2+}$\\
+		Compounds containing & $\ce{S^{2-}}$ & Compounds of $\ce{NH4+}$, the alkali metal cations, $\ce{Ca^{2+}},\ \element{Sr}^{2+}$, and $\element{Ba}^{2+}$\\
 		& $\element{C}\element{O}[3]^{2-}$ & Compounds of $\element{N}\element{H}_{4}^{+}$ and the alkali metal cations\\
 		& $\element{P}\element{O}[4]^{3-}$ & Compounds of $\element{N}\element{H}_{4}^{+}$ and the alkali metal cations\\
 		& $\element{O}\element{H}^{-}$ & Compounds of $\element{N}\element{H}_{4}^{+}$, the alkali metal cations, $\element{Ca}^{2+},\ \element{Sr}^{2+}$, and $\element{Ba}^{2+}$\\
@@ -355,4 +359,5 @@ All Arrhenius acids are also Br\o{}nsted acids and Lewis acids.
 But not all Lewis acids are Br\o{}nsted and/or Arrhenius acids;
 the same is true for bases.
 
+%</Chapter-4>
 \end{document}

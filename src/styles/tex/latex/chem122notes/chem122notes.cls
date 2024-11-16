@@ -21,11 +21,22 @@
 
 \ProcessKeyvalOptions*
 
-\RequirePackage[title={Chapter \chemnotes@chapter\ - \chemnotes@title}]{chem122}
+\RequirePackage[title={\ifx\chemnotes@chapter{}Chapter \chemnotes@chapter\ - \fi\chemnotes@title}]{chem122}
 \RequirePackage{enumitem}
 \RequirePackage{textcomp}
 
-\setcounter{chapter}{\chemnotes@chapter}
+\newcommand{\thetitle}{\chemnotes@title}
+\newcommand{\chaptersetup}[2]{
+	\setcounter{chapter}{#1-1}
+	\renewcommand{\thetitle}{#2}
+}
+
+\let\oldmaketitle\maketitle
+\renewcommand{\maketitle}{
+\chapter{\chemnotes@title}\label{ch:\arabic{chapter}}
+}
+
+\setcounter{chapter}{\chemnotes@chapter-1}
 \let\oldemph\emph
 \renewcommand{\emph}[1]{\textcolor{red}{#1}}
 \newcommand{\definition}[2]{\emph{#1} -- #2}
@@ -38,3 +49,14 @@
 \fi
 
 \newcommand{\hf}{(\Delta H_{f}\mbox{\textdegree})}
+
+\usepackage{cancel}
+\usepackage{siunitx}
+
+\RequirePackage[most]{tcolorbox}
+\newenvironment{electronstructure}
+{
+	\begin{tcolorbox}[colback=yellow,colframe=black]
+}{
+	\end{tcolorbox}
+}

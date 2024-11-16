@@ -7,12 +7,15 @@
 	title={Basic Concepts of Chemical Bonding},
 	showanswers=true,
 ]{chem122notes}
-\usepackage{siunitx}
+\usepackage{chem122}
 
-% Packages
+%<*Chapter-9>
+\chaptersetup{9}{Basic Concepts of Chemical Bonding}
 
 % Document
 \begin{document}
+
+\maketitle
 
 \section{Outline}\label{sec:outline-9}
 
@@ -27,11 +30,13 @@
 
 \section{Chemical Bonds}\label{sec:chemical-bonds}
 \definition{Chemical bond}{a strong attractive fource that exists between atoms in a molecule.}
+
 The three types of chemical bonds are as follows:
 \begin{description}[font=\emph]
 	\item[ionic bond] a bond between oppositely charged ions.
 	The ions are formed from atoms by transfer of one or more electrons.
-	\item[covalent bond]
+	\item[covalent bond] a bond formed between two or more atoms by sharing of electrons.
+	\item[metallic bond] Bonding, usually in solid metals, in which bonding electrons are relatively free to move throughout the three-dimensional structure.
 \end{description}
 
 \section{Lewis Symbols}\label{sec:lewis-symbols}
@@ -41,19 +46,64 @@ The three types of chemical bonds are as follows:
 	\item Dots are placed on the four sides of the chemical symbol, where each side can accommodate up to two electrons.
 \end{itemize}
 
+\begin{table}[H]
+	\centering
+	\caption{Lewis Symbols}
+	\label{tab:lewis-symbols}
+	\begin{tabular}{lm{0.175\textwidth}m{0.12\textwidth}|lm{0.175\textwidth}m{0.12\textwidth}}
+		\textbf{Electron} & \textbf{Electron Configuration} & \textbf{Lewis Symbol} & \textbf{Electron} & \textbf{Electron Configuration} & \textbf{Lewis Symbol}\\
+		\hline
+		\ce{Li} & \ce{[He]}2\ce{s^1} & \chemfig{\charge{0=\.}{Li}} & 									\ce{Na} & \ce{[Ne]}3\ce{s^1} & \chemfig{\charge{0=\.}{Na}}\\
+		\ce{Be} & \ce{[He]}2\ce{s^2} & \chemfig{\charge{0=\.,180=\.}{Be}} & 							\ce{Mg} & \ce{[Ne]}3\ce{s^2} & \chemfig{\charge{0=\.,180=\.}{Mg}}\\
+		\ce{B}  & \ce{[He]}2\ce{s^2}2\ce{p^1} & \chemfig{\charge{0=\.,90=\.,180=\.}{B}} & 				\ce{Al} & \ce{[Ne]}3\ce{s^2}3\ce{p^1} & \chemfig{\charge{0=\.,90=\.,180=\.}{Al}}\\
+		\ce{C}  & \ce{[He]}2\ce{s^2}2\ce{p^2} & \chemfig{\charge{0=\.,90=\.,180=\.,270=\.}{C}} & 		\ce{Si}  & \ce{[Ne]}3\ce{s^2}3\ce{p^2} & \chemfig{\charge{0=\.,90=\.,180=\.,270=\.}{Si}}\\
+		\ce{N}  & \ce{[He]}2\ce{s^2}2\ce{p^3} & \chemfig{\charge{0=\:,90=\.,180=\.,270=\.}{N}} & 		\ce{P}  & \ce{[Ne]}3\ce{s^2}3\ce{p^3} & \chemfig{\charge{0=\:,90=\.,180=\.,270=\.}{P}}\\
+		\ce{O}  & \ce{[He]}2\ce{s^2}2\ce{p^4} & \chemfig{\charge{0=\:,90=\.,180=\:,270=\.}{O}} & 		\ce{S}  & \ce{[Ne]}3\ce{s^2}3\ce{p^4} & \chemfig{\charge{0=\:,90=\.,180=\:,270=\.}{S}}\\
+		\ce{F}  & \ce{[He]}2\ce{s^2}2\ce{p^5} & \chemfig{\charge{0=\:,90=\:,180=\.,270=\:}{F}} & 		\ce{Cl}  & \ce{[Ne]}3\ce{s^2}3\ce{p^5} & \chemfig{\charge{0=\:,90=\:,180=\.,270=\:}{Cl}}\\
+		\ce{Ne} & \ce{[He]}2\ce{s^2}2\ce{p^6} & \chemfig{\charge{0=\:,90=\:,180=\:,270=\:}{Ne}} & 		\ce{Ar} & \ce{[Ne]}3\ce{s^2}3\ce{p^6} & \chemfig{\charge{0=\:,90=\:,180=\:,270=\:}{Ar}}\\
+	\end{tabular}
+\end{table}
+
 \section{Ionic Bonding}\label{sec:ionic-bonding}
 \begin{itemize}
-	\item The combination of sodium metal and chlorine gas results in a violent
-	\chemfig{\charge{90=\.}{Li}}
+	\item The combination of sodium metal and chlorine gas results in a violent reaction.
+	The product of this very exothermic reaction is sodium chloride (\ce{NaCl}).
+	\reaction{Na(s) + \frac{1}{2}Cl2(g) \rightarrow NaCl(s)\ \ \ \ \ \ \ \ \Delta H_{f}=-410.9 kJ}
+	\item Sodium chloride is comprised of \ce{Na+} and \ce{Cl-} ions (see Figure~\ref{fig:nacl-structure}).
+	\item Recall that metals (e.g., \ce{Na}) have a tendency to lose electrons to form cations, whereas nonmetals (e.g., \ce{Cl}) gain electrons to become anions.
+	\reaction{\chemfig{\charge{0=\.}{Na} + \charge{0=\:,90=\:,180=\.,270=\:}{Cl} \ce{->} \ce{Na+} +\ \left[\charge{0=\:,90=\:,180=\:,270=\:}{Cl} \right]^{-}}} % TODO: Add the brackets correctly
+\end{itemize}
+
+\section{Structure of Sodium Chloride (\ce{NaCl})}\label{sec:structure-of-sodium-chloride}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{chapter9/nacl-structure}
+	\caption{Structure of Sodium Chloride (\ce{NaCl})}
+	\label{fig:nacl-structure}
+\end{figure}
+In this three-dimensional array of ions, each \ce{Na+} ion is surrounded by siz \ce{Cl-} ions, and each \ce{Cl-} ion is surrounded by six \ce{Na+} ions.
+
+\section{Formation of \ce{NaCl}}\label{sec:formation-of-nacl}
+\begin{itemize}
+	\item What drives the reaction between \ce{Na (s)} and \ce{Cl2 (g)} to form \ce{NaCl}?
+	\item \ce{Na} has a relatively low first \hyperref[sec:ionization-energy]{ionization energy} (i.e., it is perfectly happy to give up its valence electron).
+	\emph{Ask yourself, what is the electron configuration of the resulting \ce{Na+} cation}?
+	\item \ce{Cl} has a strong tendency to gain an electron, which is manifested in its large negative electron affinity ($E_{a} = -349 \frac{\mbox{kJ}}{\mbox{mol}}$).
+	\emph{Ask yourself, what is the electron configuration of the resulting \ce{Cl-} cation}?
+	\item In addition, as the \ce{Na+} and \ce{Cl-} ions are drawn together to form \ce{NaCl}, a substantial amount of energy is released, known as the \emph{lattice energy}.
 \end{itemize}
 
 \section{Lattice Energy}\label{sec:lattice-energy}
-The energy associated with electrostatic interactions is governed by Coulomb's Law:
-\begin{equation}
-	E_{el} = \frac{\kappa Q_{1}Q_{2}}{d}
-	\label{eq:coulombs-law}
-\end{equation}
 \begin{itemize}
+	\item \definition{Lattice energy}{The energy required to completely separate a mole of a solid ionic compound into its gaseous ions.}
+	\item Lattice energies are positive as energy is required to overcome attractive forces between oppositely charged ions.
+	For example,
+	\reaction{NaCl(s) -> Na+(g) + Cl-(g)\ \ \ \ \ \ \ \ \ \Delta H_{lattice} = +788 \frac{\mbox{kJ}}{\mbox{mol}}}
+	\item The energy associated with electrostatic interactions is governed by Coulomb's Law:
+	\begin{equation}
+		E_{el} = \frac{\kappa Q_{1}Q_{2}}{d}
+		\label{eq:coulombs-law}
+	\end{equation}
 	\item Lattice energy increases with the charge on the ions.
 	\item It also increases with decreasing size of ions.
 	\item See the worked example entitled~\nameref{sec:magnitudes-of-lattice-energies}.
@@ -221,4 +271,47 @@ Draw the Lewis structures for:
 	\end{itemize}
 \end{itemize}
 
+\subsection{Odd Number of Electrons}\label{subsec:odd-number-of-electrons}
+Ions and molecules with an odd number of electrons (e.g., \ce{ClO2}, \ce{NO}, \ce{NO2}, and \ce{O2}).
+
+\begin{equation*}
+\begin{aligned}
+	\chemfig{\charge{90=\:,270=\.}{\ce{N}}=\charge{90=\:,270=\:}{\ce{O}}} \mbox{  and  } \chemfig{\charge{90=\:,270=\:}{\ce{N}}=\charge{90=\:,270=\.}{\ce{O}}}
+\end{aligned}
+\end{equation*}
+
+\subsection{Fewer than Eight Electrons}\label{subsec:fewer-than-eight-electrons}
+\reaction{\chemfig{([:30]\charge{135=\:,225=\:,315=\:}{F}-)B(-[:90]\charge{0=\:,90=\:,180=\:}{F})(-[:-30]\charge{45=\:,225=\:,315=\:}{F})}}
+\begin{itemize}
+	\item Consider \ce{BF3}
+	\begin{itemize}
+		\item Notice how the central boron does not have a complete octet?
+		\item What about resonance?
+		\item See worked example below:
+	\end{itemize}
+\end{itemize}
+
+Draw the Lewis structure for boron trifluoride, \ce{BF3}, and explain why it does not obey the octet rule.
+
+\begin{answer}
+	These resonance structures are less important than the first because they put positive charge on the most electronegative fluorine atoms!
+\end{answer}
+
+\subsection{More than Eight Electrons}\label{subsec:more-than-eight-electrons}
+\begin{itemize}
+	\item The only way \ce{PCl5} can exist is if phosphorus has 10 valence electrons around it.
+	\item It is allowed to expand the octet of atoms on or below the 3rd row/period.
+	\item \emph{Ask yourself, does \ce{NCl5} exist?} \begin{answer}No.\end{answer}
+	\item Most likely the $d$ orbitals in these atoms participate in bonding.
+\end{itemize}
+
+\section{Covalent Bond Strength}\label{sec:covalent-bond-strength}
+\reaction{\chemfig{\charge{90=\:,180=\:,270=\:}{Cl}-\charge{0=\:,90=\:,270=\:}{Cl}}(g) -> 2\charge{0=\.,90=\:,180=\:,270=\:}{Cl}(g)}
+\begin{itemize}
+	\item The strength of a bond is measured by determining how much energy is required to break the bond.
+	\item This is the \emph{bond enthalpy}.
+	\item The bond enthalpy for a \ce{Cl}-\ce{Cl} bond is measured to be 242 kJ/mol.
+\end{itemize}
+
+%</Chapter-9>
 \end{document}
