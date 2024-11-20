@@ -71,7 +71,7 @@ The three types of chemical bonds are as follows:
 	\reaction{Na(s) + \frac{1}{2}Cl2(g) \rightarrow NaCl(s)\ \ \ \ \ \ \ \ \Delta H_{f}=-410.9 kJ}
 	\item Sodium chloride is comprised of \ce{Na+} and \ce{Cl-} ions (see Figure~\ref{fig:nacl-structure}).
 	\item Recall that metals (e.g., \ce{Na}) have a tendency to lose electrons to form cations, whereas nonmetals (e.g., \ce{Cl}) gain electrons to become anions.
-	\reaction{\chemfig{\charge{0=\.}{Na} + \charge{0=\:,90=\:,180=\.,270=\:}{Cl} \ce{->} \ce{Na+} +\ \left[\charge{0=\:,90=\:,180=\:,270=\:}{Cl} \right]^{-}}} % TODO: Add the brackets correctly
+	\reaction{\chemfig{\charge{0=\.}{Na} + \charge{0=\:,90=\:,180=\.,270=\:}{Cl} \ce{->} \ce{Na+} +\ \chemleft{[} \charge{0=\:,90=\:,180=\:,270=\:}{Cl} \chemright{]}^{-}}}
 \end{itemize}
 
 \section{Structure of Sodium Chloride (\ce{NaCl})}\label{sec:structure-of-sodium-chloride}
@@ -137,34 +137,46 @@ Which substance would you expect to have the greatest lattice energy, \ce{MgF2},
 		\ce{LiCl} & 834 & \ce{SrCl2} & 2127 \\
 		\ce{LiI} & 730 & & \\
 		\ce{NaF} & 910 & \ce{MgO} & 3795 \\
-		\ce{} &  & \ce{3414} &  \\
-		\ce{} &  & \ce{3217} &  \\
-		\ce{} &  & & \\
-		\ce{} &  & \ce{7547} &  \\
-		\ce{} &  & & \\
-		\ce{} &  & & \\
-		\ce{} &  & & \\
-		\ce{} &  & & \\
+		\ce{NaCl} & 788 & \ce{CaO} & 3414 \\
+		\ce{NaBr} & 732 & \ce{SrO} & 3217 \\
+		\ce{NaI} & 682 & & \\
+		\ce{KF} & 808 & \ce{ScN} & 7547 \\
+		\ce{KFCl} & 701 & & \\
+		\ce{KBr} & 671 & & \\
+		\ce{CsCl} & 657 & & \\
+		\ce{CsI} & 600 & & \\
 	\end{tabular}
 \end{table}
 
 \section{Covalent Bonding}\label{sec:covalent-bonding}
-\begin{itemize}
-	\item In covalent bonds, atoms share electrons.
-	\item There are several electrostatic interactions in these bonds:
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{chapter9/covalent-bonding}
+		\caption{Covalent Bonding}
+		\label{fig:covalent-bonding}
+	\end{figure}
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.7\textwidth}
 	\begin{itemize}
-		\item Attractions between electrons and positive nuclei.
-		\item Repulsions between electrons
-		\item Repulsions between nuclei
-		\item Attractive forces must outweigh the repulsive ones
+		\item In covalent bonds, atoms share electrons.
+		\item There are several electrostatic interactions in these bonds:
+		\begin{itemize}
+			\item Attractions between electrons and positive nuclei.
+			\item Repulsions between electrons
+			\item Repulsions between nuclei
+			\item Attractive forces must outweigh the repulsive ones
+		\end{itemize}
 	\end{itemize}
-\end{itemize}
+\end{minipage}
 
 \section{Lewis Structures}\label{sec:lewis-structures}
 \begin{itemize}
 	\item Consider two Hydrogen atoms coming together to form a covalently bonded \ce{H2} molecule:
-	\reaction{ \chemfig{\charge{0=\.}{H}} + \chemfig{\charge{180=\.}{H}} -> }
-	\item The \ce{H2} molecule on the right, with its two electrons, exhibits the noble-gas configuration
+	\reaction{ \chemfig{\charge{0=\.}{H}} + \chemfig{\charge{180=\.}{H}} -> \chemfig{\charge{0=\:}{H}H}}
+	\item The \ce{H2} molecule on the right, with its two electrons, exhibits the noble-gas configuration of Helium.
+	The shared pair of electrons can be represented by a single bond, as shown below>
+	\reaction{\chemfig{\charge{0=\:}{H}H} = \chemfig{H-H}}
 	\item Consider two chlorine atoms coming together to form a covalently bonded \ce{Cl2} molecule:
 	\reaction{ \chemfig{\charge{0=\.,90=\:,180=\:,270=\:}{Cl} + \charge{0=\:,90=\:,180=\.,270=\:}{Cl}} -> \chemfig{\charge{0=\:,90=\:,180=\:,270=\:}{Cl}\charge{0=\:,90=\:,270=\:}{Cl}}}
 	\item Each chlorine atom on the right now has a \textit{complete octet} of electrons by sharing the bonding electron pair.
@@ -173,21 +185,68 @@ Which substance would you expect to have the greatest lattice energy, \ce{MgF2},
 \end{itemize}
 
 \section{Typical Bonding Motifs}\label{sec:typical-bonding-motifs}
-Typical bonding motifs above
+Typical bonding motifs above: hydrogen and halogens typically form one bond, oxygen two bonds, nitrogen three bonds, and carbon four bonds.
+\reaction{
+	\chemfig{H-\charge{0=\:,90=\:,270=\:}{F}}\ \ \ \ \ \ \ \
+	\chemfig{H-\charge{0=\:,90=\:}{O}(-[:270]H)}\ \ \ \ \ \ \ \
+	\chemfig{H-\charge{90=\:}{N}(-[:270]H)-H}\ \ \ \ \ \ \ \
+	\chemfig{H-C(-[:90]H)(-[:270]H)-H}
+}
+
+\section{Multiple Bonds}\label{sec:multiple-bonds}
+\begin{itemize}
+	\item Double bonds in \ce{CO2}:
+	\reaction{
+		\chemfig{\charge{0=\:,90=\.,180=\:,270=\.}{O}} +
+		\chemfig{\charge{0=\.,90=\.,180=\.,270=\.}{C}} +
+		\chemfig{\charge{0=\:,90=\.,180=\:,270=\.}{O}} ->
+		\chemfig{\charge{90=\:,270=\:}{O}=C=\charge{90=\:,270=\:}{O}}
+	}
+	\item Triple bond in \ce{N2}:
+	\reaction{
+		\chemfig{\charge{0=\.,90=\.,180=\:,270=\.}{N}} +
+		\chemfig{\charge{0=\:,90=\.,180=\.,270=\.}{N}} ->
+		\chemfig{\charge{180=\:}{N}~\charge{0=\:}{N}}
+	}
+\end{itemize}
 
 \section{Bond Polarity and Electronegativity}\label{sec:bond-polarity-and-electronegativity}
 \begin{itemize}
 	\item Molecules such as \ce{H2}, \ce{N2}, \ce{Cl2}, etc are said to be \textbf{nonpolar}.
 	\item \emph{A nonpolar covalent bond} is one in which the electrons are shared equally between two atoms.
 	\item On the other hand, \emph{a polar covalent bond} is one in which one of the atoms exerts a greater attraction for the bonding electrons than the other.
-	\item In other words, there exists a bond between atoms of different \emph{electronegativities}.
+	\item In other words, there exists a bond between atoms of different \emph{electronegativities} (e.g., O-H, C-H, N-H, etc.).
 \end{itemize}
 
 \section{Electronegativity}\label{sec:electronegativity}
 \begin{itemize}
-	\item \definition{Electronegativity}{the ability of atoms}
-	\item On the periodic table
+	\item \definition{Electronegativity}{the ability of atoms in a molecule to attract electrons to themselves.}
+	\item On the periodic table, electronegativity increases as you go$\dots$
+	\begin{itemize}
+		\item from left to right across a row
+		\item from bottom to the top of a column.
+	\end{itemize}
 \end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter9/selected-electronegativities}
+	\caption{The Electronegativities of Selected Elements}
+	\label{fig:selected-electronegativities}
+\end{figure}
+
+\section{Polar Covalent Bonds}\label{sec:polar-covalent-bonds}
+\begin{itemize}
+	\item Though atoms often form compounds by sharing electrons, the electrons are not always shared equally.
+	\item Fluorine pulls harder on the electrons it shared with Hydrogen than Hydrogen does.
+	\item Therefore, the Fluorine end of the molecule has more electron density than the hydrogen end.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter9/polar-covalent-bonds-examples}
+	\caption{Polar Covalent Bonds}
+	\label{fig:polar-covalent-bonds}
+\end{figure}
 
 \begin{table}[H]
 	\centering
@@ -204,27 +263,60 @@ Typical bonding motifs above
 	\end{tabular}
 \end{table}
 
-\begin{table}[H]
+\begin{itemize}
+	\item When two atoms share electrons unequally, a \emph{bond dipole} results.
+	\item The \emph{dipole moment}, $\mu$, produced by two equal but opposite charges separated by a distance $r$ is calculated as:
+	\begin{equation}
+		\mu = Qr
+		\label{eq:dipole-moment}
+	\end{equation}
+	\item The dipole is measured in debye (D) units.
+\end{itemize}
+\begin{figure}[H]
 	\centering
-	\caption{Polar Covalent Bonds}
-	\label{tab:polar-covalent-bonds}
-	\begin{tabular}{p{0.2\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.25\textwidth}}
-		\textbf{Compound} & \textbf{Bond Length (\si{\angstrom})} & \textbf{Electronegativity} & \textbf{Dipole Moment (D)}\\
-		\hline
-		\ce{HF}  & 0.92 & 1.9 & 1.82\\
-		\ce{HCl} & 1.27 & 0.9 & 1.08\\
-		\ce{HBr} & 1.41 & 0.7 & 0.82\\
-		\ce{HI}  & 1.61 & 0.4 & 0.44\\
-		\hline
-	\end{tabular}
+	\includegraphics[width=\textwidth]{chapter9/dipole-moment}
+	\caption{Dipole Moment $\mu$}
+	\label{fig:dipole-moment}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{threeparttable}
+		\caption{Polar Covalent Bonds}
+		\label{tab:polar-covalent-bonds}
+		\begin{tabular}{p{0.2\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.25\textwidth}}
+			\textbf{Compound} & \textbf{Bond Length (\si{\angstrom})} & \textbf{Electronegativity} & \textbf{Dipole Moment (D)}\\
+			\hline
+			\ce{HF}  & 0.92 & 1.9 & 1.82\\
+			\ce{HCl} & 1.27 & 0.9 & 1.08\\
+			\ce{HBr} & 1.41 & 0.7 & 0.82\\
+			\ce{HI}  & 1.61 & 0.4 & 0.44\\
+			\hline
+		\end{tabular}
+		\begin{tablenotes}
+			\small
+			\item The greater the difference in electronegativity, the more polar the bond is.
+		\end{tablenotes}
+	\end{threeparttable}
 \end{table}
 
+
 \section{Writing Lewis Structures}\label{sec:writing-lewis-structures}
-\reaction{\chemfig{H-H}}
-\reaction{\chemfig{\charge{90=\:,180=\:,270=\:}{Cl}-\charge{0=\:,90=\:,270=\:}{Cl}}}
+\reaction{
+	\chemfig{H-H}\ \ \ \ \ \ \ \ \ \ \ \ \
+	\chemfig{\charge{90=\:,180=\:,270=\:}{Cl}-\charge{0=\:,90=\:,270=\:}{Cl}}
+}
+\begin{itemize}
+	\item Lewis structures are representations of molecules showing all electrons, bonding and nonbonding.
+\end{itemize}
 
 \begin{enumerate}
-	\item
+	\item Find the sum of valence electrons of all atoms in the polyatomic ion or molecule.
+	\begin{itemize}
+		\item If it is an anion, add one electron for each negative charge.
+		\item If it is a cation, subtract one electron for each positive charge.
+		\item \textcolor{red}{Total number of valence electrons for \ce{PCl3} is:\_\_\_\_ \begin{answer}5 + (7*3) = 26\end{answer}}
+	\end{itemize}
 	\item The central atom is the \emph{least} electronegative element that isn't Hydrogen.
 	Connect the other atoms to it by single bonds.
 	\item Fill the octets of the outer atoms.
@@ -237,11 +329,55 @@ Typical bonding motifs above
 	\end{itemize}
 \end{enumerate}
 
+\begin{itemize}
+	\item \emph{Then assign formal charges}.
+	\item For each atom, count the electrons in lone pairs and half the electrons it shares with other atoms.
+	\item Subtract that from the number of valence electrons for that atom: the difference is its formal charge (see~\eqref{eq:formal-charge}).
+\end{itemize}
+
+\begin{equation}
+	\mbox{formal charge} = \mbox{\# of valence electrons} - \mbox{\# of lone-pair electrons} - \frac{1}{2}\mbox{ \# of bonding electrons}
+	\label{eq:formal-charge}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter9/formal-charges}
+	\caption{Formal Charges for \ce{CO2}}.
+	\label{fig:formal-charges}
+\end{figure}
+
+\begin{itemize}
+	\item The best Lewis structure$\dots$
+	\begin{itemize}
+		\item $\dots$ is the one with the fewest charges.
+		\item $\dots$ puts a negative charge on the most electronegative atom.
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chapter9/formal-charges-2}
+	\caption{Choosing the best formal charge for \ce{CON}.}
+	\label{fig:formal-charges-2}
+\end{figure}
+
+
+
 \section{Lewis Structures for Polyatomic Ions}\label{sec:lewis-structures-for-polyatomic-ions}
 Draw the Lewis structures for:
 \begin{enumerate}[label=(\alph*)]
 	\item \ce{ClO2-}
 	\begin{answer}
+		7 + 2(6) + 1 = 20 valence electrons
+		\reaction{\chemfig{
+		% FIXME: Figure out why the compiler doesn't like the chemleft and chemright being here
+%			\chemleft{[}
+			\charge{90=\:,180=\:,270=\:}{O}-
+			\charge{90=\:,270=\:}{Cl}-
+			\charge{0=\:,90=\:,270=\:}{O}
+%			\chemright{]}^{-}
+		}}
 	\end{answer}
 	\item \ce{SO4^2-}
 	\begin{answer}
@@ -260,6 +396,21 @@ Draw the Lewis structures for:
 \end{enumerate}
 
 \section{Resonance}\label{sec:resonance}
+\begin{itemize}
+	\item One possible Lewis structure of the ozone (\ce{O3}) molecule is depicted below.
+	\reaction{\chemfig{([:30]\charge{135=\:,225=\:,315=\:}{O}-) \charge{90=\:}{O} (=[:30]\charge{0=\:,90=\:,180=\:}{O})}}
+	\item But this is not consistent with the observed structure of ozone, whereby$\dots$
+	\begin{itemize}
+		\item both $\ce{O-O}$ bonds are the same length.
+	\end{itemize}
+	\item One Lewis structure cannot accurately describe a molecule like ozone.
+	\item We use multiple structures (i.e. \emph{resonance structures}) to describe the molecule.
+	\item Placement of atoms remain the same, but the placement of electrons are different.
+	\item A double headed arrow is used to indicate that the real molecule is described by an average of the resonance structures.
+\end{itemize}
+
+\subsection{An Analogy to Color Mixing}\label{subsec:an-analogy-to-color-mixing}
+Just as green is a \textit{blend} of blue and yellow$\dots$ the real structure of ozone is a \textit{blend} of the two resonance structures.
 
 \section{Exceptions to the Octet Rule}\label{sec:exceptions-to-the-octet-rule}
 \begin{itemize}
